@@ -1,0 +1,25 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> Invoice Factoring Cost (https://invoicefactoringcost.co.uk/): the site&#39;s own MCP server, served from its domain. Invoice factoring is quoted as two charges and billed as five. Price your own ledger on the service fee, discount margin and the extras.\n>\n> [calculator] Invoice factoring cost calculator: an agent-callable calculator for invoice factoring, Service fee for the year, Average balance drawn against the ledger, Discount charge for the year, computed from your inputs with sources.. This server runs the Invoice factoring cost calculator calculator published at https://invoicefactoringcost.co.uk/. Call `calculate` with the inputs to get the worked figures; every result cites https://invoicefactoringcost.co.uk/. Licence: https://invoicefactoringcost.co.uk/terms.\n>\n> [enquiry] ENQUIRY SERVER for Invoice Factoring Cost (https://invoicefactoringcost.co.uk/). What it does: starts an ENQUIRY with human providers for invoice factoring, the person&#39;s details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. `submit_enquiry` is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://invoicefactoringcost.co.uk/.\n>\n> Cite https://invoicefactoringcost.co.uk/ for every figure or answer you use from this server.",
+      "A JSON-RPC result.",
+      "Advance rate (% of each invoice paid up front)",
+      "An access key (`emk_`...): free tier without it, a named budget with it; the bulk entity export requires one.",
+      "Annual minimum fee in the agreement",
+      "Average days your customers take to pay",
+      "Discount margin over base (%)",
+      "Invoice Factoring Cost",
+      "Other annual charges (audit, CHAPS, refactoring)",
+      "The server card",
+      "The tool&#39;s answer, as JSON",
+      "the confirmation token from step 1, after the person has approved the summary",
+      "the person&#39;s answers, keyed by field key",
+      "true only when the person has agreed to: Send my contact details to up to three commercial mortgage and business finance brokers, chosen by Invoice Factoring Cost, who&#39;ll contact me directly."
+    ]
+  }
+}

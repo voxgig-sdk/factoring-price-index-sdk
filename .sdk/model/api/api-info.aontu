@@ -1,0 +1,39 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Invoice Factoring Cost"
+        url: "https://invoicefactoringcost.co.uk/"
+      }
+      description: `Invoice Factoring Cost (https://invoicefactoringcost.co.uk/): the site's own MCP server, served from its domain. Invoice factoring is quoted as two charges and billed as five. Price your own ledger on the service fee, discount margin and the extras.
+
+[calculator] Invoice factoring cost calculator: an agent-callable calculator for invoice factoring — Service fee for the year, Average balance drawn against the ledger, Discount charge for the year, computed from your inputs with sources.. This server runs the Invoice factoring cost calculator calculator published at https://invoicefactoringcost.co.uk/. Call \`calculate\` with the inputs to get the worked figures; every result cites https://invoicefactoringcost.co.uk/. Licence: https://invoicefactoringcost.co.uk/terms.
+
+[enquiry] ENQUIRY SERVER for Invoice Factoring Cost (https://invoicefactoringcost.co.uk/). What it does: starts an ENQUIRY with human providers for invoice factoring — the person's details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. submit_enquiry is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://invoicefactoringcost.co.uk/.
+
+Cite https://invoicefactoringcost.co.uk/ for every figure or answer you use from this server.`
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "accessKey"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Invoice Factoring Cost"
+          url: "https://invoicefactoringcost.co.uk"
+        }
+      ]
+      summary: "Invoice factoring is quoted as two charges and billed as five."
+      termsOfService: "https://invoicefactoringcost.co.uk/terms"
+      title: "Invoice Factoring Cost API"
+      version: "1.0.0"
+      website: "https://invoicefactoringcost.co.uk/mcp"
+    }
+  }
+}
+

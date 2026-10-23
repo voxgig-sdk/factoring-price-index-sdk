@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "calculator": {
+      "CALCULATOR00": {
+        "advance": 70,
+        "debtorDays": 71,
+        "extras": 72,
+        "margin": 73,
+        "minFee": 74,
+        "serviceFee": 75,
+        "turnover": 76,
+        "id": "CALCULATOR00"
+      },
+      "CALCULATOR01": {
+        "advance": 140,
+        "debtorDays": 141,
+        "extras": 142,
+        "margin": 143,
+        "minFee": 144,
+        "serviceFee": 145,
+        "turnover": 146,
+        "id": "CALCULATOR01"
+      },
+      "CALCULATOR02": {
+        "advance": 210,
+        "debtorDays": 211,
+        "extras": 212,
+        "margin": 213,
+        "minFee": 214,
+        "serviceFee": 215,
+        "turnover": 216,
+        "id": "CALCULATOR02"
+      }
+    }
+  },
+  "new": {
+    "calculator": {
+      "calculator_ref01": {
+        "advance": 280,
+        "debtorDays": 281,
+        "extras": 282,
+        "margin": 283,
+        "minFee": 284,
+        "serviceFee": 285,
+        "turnover": 286
+      }
+    }
+  },
+  "requests": {
+    "POST /mcp/tools/calculate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/calculator_describe": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

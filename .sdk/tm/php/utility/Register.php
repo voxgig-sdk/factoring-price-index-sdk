@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// FactoringPriceIndex SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+FactoringPriceIndexUtility::setRegistrar(function (FactoringPriceIndexUtility $u): void {
+    $u->clean = [FactoringPriceIndexClean::class, 'call'];
+    $u->clean_add = [FactoringPriceIndexClean::class, 'add'];
+    $u->clean_explain = [FactoringPriceIndexDone::class, 'clean_explain'];
+    $u->done = [FactoringPriceIndexDone::class, 'call'];
+    $u->make_error = [FactoringPriceIndexMakeError::class, 'call'];
+    $u->feature_add = [FactoringPriceIndexFeatureAdd::class, 'call'];
+    $u->feature_hook = [FactoringPriceIndexFeatureHook::class, 'call'];
+    $u->feature_init = [FactoringPriceIndexFeatureInit::class, 'call'];
+    $u->fetcher = [FactoringPriceIndexFetcher::class, 'call'];
+    $u->make_fetch_def = [FactoringPriceIndexMakeFetchDef::class, 'call'];
+    $u->make_context = [FactoringPriceIndexMakeContext::class, 'call'];
+    $u->make_options = [FactoringPriceIndexMakeOptions::class, 'call'];
+    $u->make_request = [FactoringPriceIndexMakeRequest::class, 'call'];
+    $u->make_response = [FactoringPriceIndexMakeResponse::class, 'call'];
+    $u->make_result = [FactoringPriceIndexMakeResult::class, 'call'];
+    $u->make_point = [FactoringPriceIndexMakePoint::class, 'call'];
+    $u->make_spec = [FactoringPriceIndexMakeSpec::class, 'call'];
+    $u->make_url = [FactoringPriceIndexMakeUrl::class, 'call'];
+    $u->param = [FactoringPriceIndexParam::class, 'call'];
+    $u->prepare_auth = [FactoringPriceIndexPrepareAuth::class, 'call'];
+    $u->prepare_body = [FactoringPriceIndexPrepareBody::class, 'call'];
+    $u->prepare_headers = [FactoringPriceIndexPrepareHeaders::class, 'call'];
+    $u->prepare_method = [FactoringPriceIndexPrepareMethod::class, 'call'];
+    $u->prepare_params = [FactoringPriceIndexPrepareParams::class, 'call'];
+    $u->prepare_path = [FactoringPriceIndexPreparePath::class, 'call'];
+    $u->prepare_query = [FactoringPriceIndexPrepareQuery::class, 'call'];
+    $u->graphql_body = [FactoringPriceIndexGraphql::class, 'body'];
+    $u->graphql_errors = [FactoringPriceIndexGraphql::class, 'errors'];
+    $u->result_basic = [FactoringPriceIndexResultBasic::class, 'call'];
+    $u->result_body = [FactoringPriceIndexResultBody::class, 'call'];
+    $u->result_headers = [FactoringPriceIndexResultHeaders::class, 'call'];
+    $u->transform_request = [FactoringPriceIndexTransformRequest::class, 'call'];
+    $u->transform_response = [FactoringPriceIndexTransformResponse::class, 'call'];
+});

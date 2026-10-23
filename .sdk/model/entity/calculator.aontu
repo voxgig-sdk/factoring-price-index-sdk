@@ -1,0 +1,144 @@
+# Entity: calculator
+
+main: kit: entity: calculator: {
+
+  alias: field: {}
+
+  fields: {
+    advance: {
+      h: "Advance"
+      n: "advance"
+      r: false
+      sh: "Advance rate (% of each invoice paid up front)"
+      t: "`$NUMBER`"
+    }
+    debtorDays: {
+      h: "Debtor Days"
+      n: "debtorDays"
+      r: false
+      sh: "Average days your customers take to pay"
+      t: "`$NUMBER`"
+    }
+    extras: {
+      h: "Extras"
+      n: "extras"
+      r: false
+      sh: "Other annual charges (audit, CHAPS, refactoring)"
+      t: "`$NUMBER`"
+    }
+    margin: {
+      h: "Margin"
+      n: "margin"
+      r: false
+      sh: "Discount margin over base (%)"
+      t: "`$NUMBER`"
+    }
+    minFee: {
+      h: "Min Fee"
+      n: "minFee"
+      r: false
+      sh: "Annual minimum fee in the agreement"
+      t: "`$NUMBER`"
+    }
+    serviceFee: {
+      h: "Service Fee"
+      n: "serviceFee"
+      r: false
+      sh: "Service fee (% of turnover)"
+      t: "`$NUMBER`"
+    }
+    turnover: {
+      h: "Turnover"
+      n: "turnover"
+      r: false
+      sh: "Annual turnover put through the facility"
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "calculator"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "advance"
+            "debtorDays"
+            "extras"
+            "margin"
+            "minFee"
+            "serviceFee"
+            "turnover"
+          ]
+          co: {
+            id: "POST /mcp/tools/calculate"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/calculate"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "calculate"
+            }
+          ]
+          t: {
+            req: {
+              advance: "`reqdata.advance`"
+              debtorDays: "`reqdata.debtor_day`"
+              extras: "`reqdata.extra`"
+              margin: "`reqdata.margin`"
+              minFee: "`reqdata.min_fee`"
+              serviceFee: "`reqdata.service_fee`"
+              turnover: "`reqdata.turnover`"
+            }
+            res: "`body`"
+          }
+        }
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/calculator_describe"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/calculator_describe"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "calculator_describe"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
